@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+</head>
+<body>
+<div id="sse"></div>
+</body>
+
+<script>
+    var sse = new EventSource('/weather');
+    sse.onmessage = function (evt) {
+        console.log(evt)
+        var el = document.getElementById('sse');
+        el.appendChild(document.createTextNode(evt.data));
+        el.appendChild(document.createElement('br'));
+    };
+</script>
+</html>
