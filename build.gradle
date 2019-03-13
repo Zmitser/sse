@@ -20,12 +20,14 @@ sourceCompatibility = '1.8'
 
 repositories {
     mavenCentral()
+    maven { url "https://dl.bintray.com/xsavikx/openweathermap-java-api" }
 }
 
 dependencies {
     compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
     compile 'org.springframework.boot:spring-boot-starter-web'
     compile 'com.fasterxml.jackson.module:jackson-module-kotlin'
+    compile 'org.openweathermap.java-api:api-core:1.2'
     compile 'org.jetbrains.kotlin:kotlin-reflect'
     compile 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
     testCompile 'org.springframework.boot:spring-boot-starter-test'
